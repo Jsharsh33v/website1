@@ -1,0 +1,137 @@
+/* Animation utilities */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Animation delays for cascading effects */
+  .delay-100 {
+    transition-delay: 0.1s;
+  }
+  
+  .delay-200 {
+    transition-delay: 0.2s;
+  }
+  
+  .delay-300 {
+    transition-delay: 0.3s;
+  }
+  
+  .delay-400 {
+    transition-delay: 0.4s;
+  }
+  
+  .delay-500 {
+    transition-delay: 0.5s;
+  }
+  
+  /* Fade animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  /* Slide animations */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 0.8s ease forwards;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.8s ease forwards;
+  }
+  
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .slide-in-up {
+    animation: slideInUp 0.8s ease forwards;
+  }
+  
+  /* Rotating animation for 3D object */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotate-slow {
+    animation: rotate 20s linear infinite;
+  }
+  
+  /* Hover effects */
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Button hover animation */
+  .button-hover {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .button-hover:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease;
+    transform: skewX(-15deg);
+  }
+  
+  .button-hover:hover:after {
+    transform: translateX(200%) skewX(-15deg);
+  }
